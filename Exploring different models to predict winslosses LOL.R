@@ -82,7 +82,7 @@ Data_train %>%
 glm1 <- glm(blueWins ~.,data = Data_train, family = 'binomial')
 summary(glm1) 
 
-"
+'
 #Try AIC
 step(glm1)
 
@@ -94,8 +94,8 @@ summary(mymodel2)
 
 #Likelihood Ratio Test
 lrtest(glm1,mymodel2)
-#New model did not improved compared to the old model. Keep "mymodel1"
-"
+#New model did not improved compared to the old model. Keep "mymodel1"'
+
 
 #Making predictions
 Data_train$pred <- predict(glm1, newdata=Data_train, type="response")
@@ -183,4 +183,4 @@ svmLinear2_Grid
 plot(svmLinear2_Grid)
 test_pred_SVM2Grid<-predict(svmLinear2_Grid,Data_test)
 CMSVM2Grid<-confusionMatrix(table(test_pred_SVM2Grid, Data_test$blueWins))
-#New Model did not improved.
+#New Model did not improve.
